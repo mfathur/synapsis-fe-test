@@ -16,8 +16,8 @@ Developed by Muhammad Fathurrohman. This app have been deployed in vercel. You c
 
 ## How to run
 
-1. Create `.env` file with variables based on `.env.example`.
-2. Assign all the variables in the `.env` file.
+1. Create `.env.local` file with variables based on `.env.example`.
+2. Assign all the variables in the `.env.local` file.
 3. Run the app by typing the command below in the command line.
 
 ```
