@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 229, 229, 229;
+    --background-start-rgb: 18, 18, 18;
+    --background-end-rgb: 18, 18, 18;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.bg_primary {
+  @apply bg-primary dark:bg-primary-200;
+}
+
+.btn_contained {
+  @apply bg_primary dark:hover:bg-primary/[0.2] transition-colors font-semibold;
+}
+
+.btn_contained:disabled {
+  @apply cursor-default dark:hover:bg-primary-200 hover:bg-primary;
+}
+
+.btn_outlined {
+  @apply border dark:hover:bg-primary-200 dark:hover:border-primary-200;
+}
