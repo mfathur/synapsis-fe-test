@@ -4,9 +4,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { MdOutlineSearch } from "react-icons/md";
 
-type Props = {};
-
-const SearchBox = (props: Props) => {
+const SearchBox = () => {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
