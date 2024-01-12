@@ -12,10 +12,9 @@ const MenuItem = ({ Icon, title, path, onClick }: Props) => {
   const pathname = usePathname();
 
   // Highlight menu item based on currently displayed route
-  const colorClass =
-    pathname === path
-      ? "text-white dark:text-gray-200"
-      : "text-white/50 hover:text-white";
+  const colorClass = pathname.includes(path)
+    ? "text-white dark:text-gray-200"
+    : "text-white/50 hover:text-white";
 
   return (
     <Link

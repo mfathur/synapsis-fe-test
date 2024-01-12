@@ -7,9 +7,7 @@ import FormBtnSubmit from "./FormBtnSubmit";
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-type Props = {};
-
-const AddUserModal = (props: Props) => {
+const AddUserModal = () => {
   const formRef = useRef<HTMLFormElement>(null);
 
   const searchParams = useSearchParams();

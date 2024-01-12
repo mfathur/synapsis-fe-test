@@ -6,7 +6,7 @@ type Props = {
 
 const BlogItem = ({ blog }: Props) => {
   return (
-    <div className="border-t px-4 py-6">
+    <div className="border-t dark:border-gray-500 border-gray-400 px-4 py-6">
       <Link href={`/blogs/${blog.id}`}>
         <p className="text-primary-dark font-bold cursor-pointer hover:underline">
           {blog.title}
