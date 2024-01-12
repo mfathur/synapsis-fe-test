@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
 }
 
@@ -27,17 +27,17 @@ body {
 }
 
 .bg_primary {
-  @apply bg-primary dark:bg-primary-200;
+  @apply bg-primary dark:bg-gray-800;
 }
 
 .btn_contained {
-  @apply bg_primary dark:hover:bg-primary/[0.2] transition-colors font-semibold;
+  @apply bg_primary hover:bg-blue-600 dark:hover:bg-primary/[0.2] transition-colors font-semibold text-white;
 }
 
 .btn_contained:disabled {
-  @apply cursor-default dark:hover:bg-primary-200 hover:bg-primary;
+  @apply cursor-default dark:hover:bg-primary-200 bg-gray-300 dark:bg-gray-900 dark:text-gray-700;
 }
 
 .btn_outlined {
-  @apply border dark:hover:bg-primary-200 dark:hover:border-primary-200;
+  @apply dark:text-white border border-primary dark:border-gray-900 hover:border-blue-600 dark:hover:bg-primary-200 dark:hover:border-primary-200 transition-all;
 }

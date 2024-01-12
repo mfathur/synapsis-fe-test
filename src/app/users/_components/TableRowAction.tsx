@@ -31,10 +31,10 @@ const TableRowAction = ({ userId }: Props) => {
   return (
     <div className="flex text-2xl gap-x-6">
       <button onClick={handleBtnEditClick}>
-        <MdEdit className="hover:text-white" />
+        <MdEdit className="dark:hover:text-white hover:text-primary" />
       </button>
       <button onClick={handleBtnDeleteClick}>
-        <MdDelete className="hover:text-white" />
+        <MdDelete className="dark:hover:text-white hover:text-primary" />
       </button>
     </div>
   );
