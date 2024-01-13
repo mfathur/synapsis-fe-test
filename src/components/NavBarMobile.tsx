@@ -38,9 +38,12 @@ const NavBarMobile = () => {
       {showMenu ? (
         <>
           <ModalOverlay />
-          <NavBarMobileMenu onMenuItemClick={handleMenuItemClick} />
         </>
       ) : null}
+      <NavBarMobileMenu
+        isOpen={showMenu}
+        onMenuItemClick={handleMenuItemClick}
+      />
     </nav>
   );
 };
