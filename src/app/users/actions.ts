@@ -39,10 +39,6 @@ export const addUser = async (formData: FormData) => {
     body: JSON.stringify(body),
   });
 
-  if (response.status == 201) {
-    console.log("success");
-  }
-
   revalidatePath("/users");
 };
 

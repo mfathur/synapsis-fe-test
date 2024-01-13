@@ -1,14 +1,11 @@
-import { MdAdd, MdPersonAdd } from "react-icons/md";
 import AddUserModal from "./_components/AddUserModal";
 import SearchBox from "./_components/SearchBox";
 import UserTable from "./_components/Table";
 import { Suspense } from "react";
 import UserTableSkeleton from "./_components/TableSkeleton";
 import BtnAddUser from "./_components/BtnAddUser";
-import Dialog from "@/components/Dialog";
 import EditUserModal from "./_components/EditUserModal";
 import DeleteUserDialog from "./_components/DeleteUserDialog";
-import { GOREST_API_ACCESS_TOKEN } from "@/utils/constant";
 
 async function Page({
   searchParams,
