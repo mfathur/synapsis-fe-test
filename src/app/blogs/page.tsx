@@ -2,29 +2,7 @@ import BlogItem from "./_components/BlogItem";
 import BtnPageChanger from "@/components/BtnPageChanger";
 import { Suspense } from "react";
 import BlogItemSkeleton from "./_components/BlogItemSkeleton";
-import {
-  GOREST_API_BASE_URL,
-  GOREST_API_HEADER_PAGINATION_PAGES,
-} from "@/utils/constant";
-
-async function getPaginatedBlogs(currentPage: number) {
-  const queryParams = new URLSearchParams({
-    page: currentPage.toString(),
-    per_page: "10",
-  });
-
-  const response = await fetch(`${GOREST_API_BASE_URL}/posts?${queryParams}`, {
-    cache: "force-cache",
-    method: "GET",
-  });
-
-  const headers = response.headers;
-  const data = (await response.json()) as Blog[];
-
-  const pageCount = Number(headers.get(GOREST_API_HEADER_PAGINATION_PAGES));
-
-  return { data, pageCount };
-}
+import { getPaginatedBlogs } from "./actions";
 
 export default async function Page({
   searchParams,
