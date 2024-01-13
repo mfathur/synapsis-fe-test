@@ -30,7 +30,7 @@ export const addUser = async (formData: FormData) => {
     status: formData.get("status"),
   };
 
-  const response = await fetch(`${GOREST_API_BASE_URL}/users`, {
+  await fetch(`${GOREST_API_BASE_URL}/users`, {
     method: "POST",
     headers: new Headers({
       Authorization: `Bearer ${GOREST_API_ACCESS_TOKEN}`,
@@ -38,10 +38,6 @@ export const addUser = async (formData: FormData) => {
     }),
     body: JSON.stringify(body),
   });
-
-  if (response.status == 201) {
-    console.log("success");
-  }
 
   revalidatePath("/users");
 };

@@ -6,7 +6,7 @@ import { MdClose } from "react-icons/md";
 
 type Props = {
   title: string;
-  stateTag: string;
+  stateTag: string; // state tag is used to edit modal state in params
   onClose: () => void;
   btnPositiveText?: string;
   onBtnPositiveClick?: () => void;
@@ -16,6 +16,9 @@ type Props = {
   children: React.ReactNode;
 };
 
+/**
+ * This function is the base component for modal or dialog.
+ */
 const Dialog = ({
   title,
   stateTag,
