@@ -7,6 +7,6 @@ export const GOREST_API_HEADER_PAGINATION_TOTAL = "x-pagination-total";
 export const GOREST_API_ACCESS_TOKEN = process.env.GO_REST_API_ACCESS_TOKEN;
 
 export const SIDENAV_ITEMS: SideNavItem[] = [
-  { title: "Blogs", path: "/", Icon: TbNews },
+  { title: "Blogs", path: "/blogs", Icon: TbNews },
   { title: "Users", path: "/users", Icon: IoPersonSharp },
 ];
