@@ -1,4 +1,3 @@
-import { MdDelete, MdEdit } from "react-icons/md";
 import {
   GOREST_API_BASE_URL,
   GOREST_API_HEADER_PAGINATION_PAGES,
